@@ -1,0 +1,191 @@
+:root {
+  --paper: #eee6ce;
+  --surface: #f8f1dc;
+  --ink: #282b18;
+  --muted: #686653;
+  --line: #bdb79e;
+  --accent: #53601c;
+  --deep-green: #3f490c;
+  --cream: #fff3d6;
+  --rust: #914b2d;
+  --warning: #7d3d24;
+  --warning-bg: #ead9c7;
+}
+
+* { box-sizing: border-box; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, p { margin-top: 0; }
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  overflow: hidden;
+  padding: calc(3.5rem + env(safe-area-inset-top)) max(1.25rem, calc((100% - 62rem) / 2)) 1.7rem;
+  border-bottom: 8px solid #303800;
+  color: var(--cream);
+  background:
+    radial-gradient(circle at 20% 30%, #ffffff0a 0 1px, transparent 2px) 0 0 / 7px 7px,
+    linear-gradient(115deg, #56631d, #46520f 70%);
+}
+.hero::after {
+  content: "SCOTLAND · 2026";
+  position: absolute;
+  top: 2.3rem;
+  right: max(1.25rem, calc((100% - 62rem) / 2));
+  padding: .45rem .65rem;
+  border: 1px solid #fff3d680;
+  outline: 1px solid #fff3d680;
+  outline-offset: 3px;
+  color: #fff3d6b8;
+  font: 600 .65rem/1 Georgia, serif;
+  letter-spacing: .13em;
+  transform: rotate(2deg);
+}
+.eyebrow, .kicker, .card-type {
+  margin: 0 0 .55rem;
+  color: var(--accent);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+h1 {
+  grid-column: 1 / -1;
+  margin: 0 0 .35rem;
+  color: var(--cream);
+  font: 700 clamp(3.2rem, 10vw, 6.2rem)/.95 Georgia, "Times New Roman", serif;
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.hero .eyebrow { color: #fff3d6b8; }
+.lead { grid-column: 1; margin: 0; color: #fff3d6c7; }
+.dates { grid-column: 2; margin: 0; font-weight: 650; }
+nav {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 1.3rem;
+  overflow-x: auto;
+  margin-top: 2.5rem;
+  padding-bottom: .1rem;
+}
+nav a, nav button {
+  flex: 0 0 auto;
+  padding: 0 0 .2rem;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  color: var(--cream);
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav a:hover, nav button:hover { border-color: var(--cream); }
+
+main, footer { width: min(62rem, calc(100% - 2.5rem)); margin: auto; }
+section { padding: 4.5rem 0; border-bottom: 1px solid var(--line); }
+h2 {
+  max-width: 16ch;
+  margin-bottom: 2rem;
+  font: 700 clamp(2rem, 5vw, 3rem)/1.05 Georgia, "Times New Roman", serif;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+.summary { display: block; }
+.summary h2 { margin-bottom: 0; }
+.summary dl { display: grid; grid-template-columns: repeat(2, 1fr); margin: 0; border-top: 2px solid var(--accent); }
+.summary dl div { padding: .9rem 0; border-bottom: 1px solid var(--line); }
+.summary dl div:nth-child(odd) { padding-right: 1rem; }
+dt { color: var(--muted); font-size: .75rem; }
+dd { margin: .15rem 0 0; font-weight: 700; }
+.notice { margin: 1rem 0 0; color: var(--muted); font-size: .8rem; }
+
+.timeline { border-top: 2px solid var(--accent); }
+.day {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+  break-inside: avoid;
+}
+.day-content { min-width: 0; }
+.day-date { margin: 0; color: var(--muted); font-size: .78rem; font-weight: 600; text-transform: uppercase; }
+.day h3 { margin: 0 0 .45rem; font: 700 1.05rem/1.3 Georgia, serif; }
+.day ul { margin: 0; padding: 0; color: var(--muted); list-style: none; }
+.day li + li { margin-top: .18rem; }
+.day li { overflow-wrap: anywhere; }
+
+.placeholder-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 2px solid var(--accent); }
+.placeholder-grid article {
+  min-width: 0;
+  padding: 1.5rem 1.5rem 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.placeholder-grid article:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.placeholder-grid .flight-card { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
+.placeholder-grid h3 { margin-bottom: .8rem; font: 700 1.15rem/1.25 Georgia, serif; }
+.placeholder-grid p { margin-bottom: .65rem; color: var(--muted); }
+.placeholder-grid p strong { color: var(--ink); }
+.placeholder-grid .card-type { margin-bottom: .4rem; color: var(--accent); }
+.placeholder-grid a { color: var(--accent); font-weight: 700; text-underline-offset: .18em; }
+.placeholder-grid .time-warning {
+  margin: 1.1rem 0 0;
+  padding: .8rem 1rem;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+  background: #ffffff38;
+}
+
+.budget-wrap { border-top: 2px solid var(--accent); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .85rem 0; border-bottom: 1px solid var(--line); text-align: left; }
+td { text-align: right; font-variant-numeric: tabular-nums; }
+tbody th { font-weight: 450; }
+tfoot th, tfoot td { border-bottom: 2px solid var(--accent); font-weight: 750; }
+.confirmed-cost { margin-top: 1.25rem; padding-left: 1rem; border-left: 3px solid var(--accent); }
+.source-note { margin-top: 1rem; color: var(--muted); font-size: .8rem; }
+footer { padding: 2rem 0 calc(2rem + env(safe-area-inset-bottom)); color: var(--muted); font-size: .75rem; }
+
+@media (max-width: 640px) {
+  .hero { display: block; padding-top: calc(2rem + env(safe-area-inset-top)); }
+  .hero::after { display: none; }
+  .lead { margin-bottom: .2rem; }
+  .dates { font-size: .9rem; }
+  nav { margin-top: 1.8rem; }
+  main, footer { width: min(100% - 2rem, 62rem); }
+  section { padding: 3.25rem 0; }
+  .summary dl { grid-template-columns: 1fr; }
+  .summary dl div:nth-child(odd) { padding-right: 0; }
+  .notice { margin: 1rem 0 0; }
+  .day { grid-template-columns: 6.4rem 1fr; gap: .8rem; }
+  .placeholder-grid { grid-template-columns: 1fr; }
+  .placeholder-grid article, .placeholder-grid article:nth-child(even), .placeholder-grid .flight-card {
+    grid-column: auto;
+    padding: 1.35rem 0;
+    border-left: 0;
+  }
+}
+
+@media print {
+  @page { margin: 14mm; }
+  body { background: white; font-size: 9.5pt; }
+  .hero { padding: 0 0 7mm; }
+  .hero h1 { font-size: 30pt; }
+  nav, .notice { display: none; }
+  main, footer { width: 100%; }
+  section { padding: 8mm 0; }
+  .timeline { display: grid; grid-template-columns: 1fr 1fr; column-gap: 8mm; }
+  .day { grid-template-columns: 25mm 1fr; padding: 3mm 0; }
+  .placeholder-grid { grid-template-columns: repeat(2, 1fr); }
+  .placeholder-grid article { break-inside: avoid; }
+  #budget { break-before: page; }
+}
