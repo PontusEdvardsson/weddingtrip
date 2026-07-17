@@ -1,5 +1,5 @@
 const days = [
-  { date: "Ons 5 augusti", from: "Kode", to: "Moray", plans: ["Ryanair FR5658: Landvetter 10:40 → Edinburgh 11:35", "Hämta hyrbil hos Dollar/Hertz 13:00", "Edinburgh Airport → Moray: cirka 3 tim 30 min", "Sikta på avfärd 13:30 och ankomst omkring 17:00–17:30", "Airbnb-incheckning efter 15:00", "Vila"] },
+  { date: "Ons 5 augusti", from: "Kode", to: "Elgin", plans: ["Ryanair FR5658: Landvetter 10:40 → Edinburgh 11:35", "Hämta hyrbil hos Dollar/Hertz 13:00", "Edinburgh Airport → Elgin: cirka 3 tim 30 min", "Sikta på avfärd 13:30 och ankomst omkring 17:00–17:30", "Airbnb-incheckning efter 15:00", "Vila"] },
   { date: "Tors 6 augusti", from: "Elgin", to: "Elgin", plans: ["Vila och utforska närområdet"] },
   { date: "Fre 7 augusti", from: "Elgin", to: "Elgin", plans: ["Elgin → Drumbuie Farm: cirka 1 tim 15–30 min", "Avfärd senast 10:15 för lugn marginal", "Highland Coo Afternoon Tea 12:00–13:30", "Utforska Drumnadrochit med omnejd", "Tillbaka till Elgin: cirka 1 tim 15–30 min"] },
   { date: "Lör 8 augusti", from: "Elgin", to: "Elgin", plans: ["Förslag: avfärd mot Cove Sea Links 08:45", "Golf cirka 09:30–11:30", "Cove Sea Links → Glen Moray: cirka 20–25 min", "Glen Moray visitor centre och butik cirka 12:30–14:00", "Lunch eller fika och köp av en minnesflaska", "Resten av eftermiddagen fri"] },
