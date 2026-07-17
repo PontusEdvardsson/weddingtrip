@@ -1,4 +1,4 @@
-const CACHE = "brollopsresan-v16";
+const CACHE = "brollopsresan-v17";
 const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest"];
 self.addEventListener("install", event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES))));
 self.addEventListener("activate", event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));
