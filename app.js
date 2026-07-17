@@ -24,6 +24,25 @@ const budget = [
   ["Reserv", 3500]
 ];
 
+const packing = {
+  pontus: {
+    "Kläder": ["Underkläder och strumpor", "T-shirts och skjortor", "Byxor", "Tröja eller fleece", "Sovkläder", "Finare kläder till middagen", "Regnjacka", "Vardagsjacka", "Bekväma skor", "Golfkläder", "Keps eller mössa"],
+    "Hygien": ["Tandborste och tandkräm", "Deodorant", "Hud- och hårprodukter", "Rakhyvel", "Kontaktlinser eller glasögon", "Personliga läkemedel"],
+    "Teknik och handbagage": ["Mobil", "Plånbok", "Hörlurar", "Laddkabel", "Powerbank", "Retur: liten väska under sätet", "Retur: kabinväska enligt Priority-mått"]
+  },
+  sarri: {
+    "Kläder": ["Underkläder och strumpor", "Toppar och skjortor", "Byxor, kjol eller klänning", "Tröja eller fleece", "Sovkläder", "Finare kläder till middagen", "Regnjacka", "Vardagsjacka", "Bekväma skor", "Golfkläder", "Keps eller mössa"],
+    "Hygien": ["Tandborste och tandkräm", "Deodorant", "Hud- och hårprodukter", "Smink och sminkborttagning", "Kontaktlinser eller glasögon", "Personliga läkemedel"],
+    "Teknik och handbagage": ["Mobil", "Plånbok", "Hörlurar", "Laddkabel", "Powerbank", "Liten väska för resdagen"]
+  },
+  shared: {
+    "Resan": ["Pass", "Körkort", "Kontrollera UK ETA mot rätt pass", "Flygbiljetter i Ryanair-appen", "Hyrbilsvoucher", "Boendeuppgifter offline", "Reseförsäkring och EU-kort", "Betalkort och lite reservpengar"],
+    "Praktiskt": ["UK-adapter", "Gemensam laddare", "Powerbank", "Första hjälpen och värktabletter", "Solskydd", "Myggmedel", "Paraply", "Vattenflaskor", "Tvättsäck", "Plastpåse för våta kläder"],
+    "Golf och bil": ["Boka hyrklubbor vid behov", "Golfhandskar", "Golfbollar och peggar", "Solglasögon", "Mobilhållare till bilen", "Offlinekartor", "Kontrollera däck och fotografera hyrbilen"],
+    "Innan avresa": ["Väg Pontus väska – max 20 kg", "Väg Sarris väska – max 20 kg", "Ladda ner boardingkort", "Ladda mobiler och powerbanks", "Kontrollera väderprognosen", "Ställ in autosvar och ordna hemmet"]
+  }
+};
+
 const money = new Intl.NumberFormat("sv-SE", { style: "currency", currency: "SEK", maximumFractionDigits: 0 });
 
 document.querySelector("#timeline").innerHTML = days.map((day, index) => `
@@ -41,5 +60,53 @@ document.querySelector("#budget-rows").innerHTML = budget.map(([label, amount]) 
 
 document.querySelector("#updated").textContent = new Intl.DateTimeFormat("sv-SE", { dateStyle: "long" }).format(new Date());
 document.querySelector("#print").addEventListener("click", () => window.print());
+
+const packingState = JSON.parse(localStorage.getItem("packing-v1") || "{}");
+const packingRoot = document.querySelector("#packing-lists");
+const tabs = [...document.querySelectorAll("[data-pack-tab]")];
+
+function itemId(person, category, item) {
+  return `${person}|${category}|${item}`;
+}
+
+function updatePackingProgress() {
+  Object.entries(packing).forEach(([person, categories]) => {
+    const ids = Object.entries(categories).flatMap(([category, items]) => items.map(item => itemId(person, category, item)));
+    const checked = ids.filter(id => packingState[id]).length;
+    document.querySelector(`#progress-${person}`).textContent = `${checked}/${ids.length}`;
+  });
+}
+
+function showPackingList(person) {
+  packingRoot.innerHTML = Object.entries(packing[person]).map(([category, items]) => `
+    <div class="packing-group">
+      <h3>${category}</h3>
+      ${items.map(item => {
+        const id = itemId(person, category, item);
+        return `<label><input type="checkbox" data-pack-id="${id}" ${packingState[id] ? "checked" : ""}><span>${item}</span></label>`;
+      }).join("")}
+    </div>`).join("");
+  packingRoot.querySelectorAll("[data-pack-id]").forEach(input => input.addEventListener("change", event => {
+    packingState[event.target.dataset.packId] = event.target.checked;
+    localStorage.setItem("packing-v1", JSON.stringify(packingState));
+    updatePackingProgress();
+  }));
+}
+
+tabs.forEach(tab => tab.addEventListener("click", () => {
+  tabs.forEach(other => other.setAttribute("aria-selected", String(other === tab)));
+  showPackingList(tab.dataset.packTab);
+}));
+
+document.querySelector("#reset-packing").addEventListener("click", () => {
+  if (!window.confirm("Nollställa alla kryss i packlistan?")) return;
+  Object.keys(packingState).forEach(key => delete packingState[key]);
+  localStorage.removeItem("packing-v1");
+  showPackingList(document.querySelector('[data-pack-tab][aria-selected="true"]').dataset.packTab);
+  updatePackingProgress();
+});
+
+showPackingList("pontus");
+updatePackingProgress();
 
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("service-worker.js");

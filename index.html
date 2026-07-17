@@ -18,6 +18,7 @@
     <nav aria-label="Sidnavigation">
       <a href="#oversikt">Översikt</a>
       <a href="#dagar">Dag för dag</a>
+      <a href="#packlista">Packlista</a>
       <a href="#budget">Budget</a>
       <button type="button" id="print">Skriv ut</button>
     </nav>
@@ -44,7 +45,7 @@
     <section id="bokningar" aria-labelledby="booking-title">
       <h2 id="booking-title">Bokningar och viktiga uppgifter</h2>
       <div class="placeholder-grid">
-        <article class="flight-card"><p class="card-type">Transport</p><h3>Flyg · Ryanair</h3><p><strong>Ut · FR5658:</strong> Göteborg Landvetter (GOT) → Edinburgh (EDI)<br>Ons 5 aug · 10:40–11:35</p><p><strong>Hem:</strong> Edinburgh (EDI) → Göteborg Landvetter (GOT)<br>Tors 13 aug · 14:25–17:15</p><p>Tiderna är lokala</p></article>
+        <article class="flight-card"><p class="card-type">Transport</p><h3>Flyg · Ryanair</h3><p><strong>Ut · FR5658:</strong> Göteborg Landvetter (GOT) → Edinburgh (EDI)<br>Ons 5 aug · 10:40–11:35<br>Pontus 10B · Sarri 10A · varsin incheckad väska 20 kg</p><p><strong>Hem · FR5657:</strong> Edinburgh (EDI) → Göteborg Landvetter (GOT)<br>Tors 13 aug · 14:25–17:15<br>Pontus 10B · Sarri 10A · varsin incheckad väska 20 kg<br>Pontus: Prioritet och två handbagage</p><p>Tiderna är lokala</p></article>
         <article class="stay-card"><p class="card-type">Boende 1</p><h3>Moray · nära Elgin</h3><p><strong>5–10 augusti · 5 nätter</strong><br>Incheckning efter 15:00<br>Utcheckning före 10:00</p><p>Värd: Sheila · exakt adress inväntas</p></article>
         <article class="stay-card"><p class="card-type">Boende 2</p><h3>Lennoxtown</h3><p><strong>10–11 augusti · 1 natt</strong><br>Incheckning efter 14:00<br>Utcheckning före 10:00</p><p>Värd: Maree · exakt adress inväntas</p></article>
         <article class="stay-card"><p class="card-type">Boende 3</p><h3>East Calder</h3><p><strong>11–13 augusti · 2 nätter</strong><br>Incheckning efter 15:00<br>Utcheckning före 11:00</p><p>Värd: Steven John · exakt adress inväntas</p></article>
@@ -53,6 +54,22 @@
         <article class="activity-card"><p class="card-type">Aktivitet · Preliminär</p><h3>Golf på Cove Sea Links</h3><p><strong>Lördag 8 augusti<br>Pay &amp; Play · ingen starttid behövs</strong></p><p>9 hål: £30 per person<br>18 hål: £50 per person<br>Hyrklubbor: £15 per set<br>Dragvagn: £5</p><p>Hyrklubbor bör förbokas. Golfbil finns inte.</p><p><a href="mailto:info@covesealinks.com">info@covesealinks.com</a><br><a href="https://covesealinks.com/the-course/">Banans webbplats</a><br><a href="https://maps.apple.com/?q=Covesea+Links+Golf+Course">Öppna i Kartor</a></p></article>
         <article class="activity-card"><p class="card-type">Aktivitet · Planerad</p><h3>Glen Moray Distillery</h3><p><strong>Lördag 8 augusti<br>Cirka 12:30–14:00</strong></p><p>Lunch eller fika i visitor centre, besök i butiken och köp av en fin flaska att spara från resan. Fråga efter möjlighet att fylla en egen flaska.</p><p>Bruceland Road, Elgin<br>IV30 1YE · öppet 09:00–17:00</p><p><a href="https://www.glenmoray.com/book-your-visit">Besöksinformation</a><br><a href="https://maps.apple.com/?q=Glen+Moray+Distillery+Elgin">Öppna i Kartor</a></p></article>
       </div>
+    </section>
+
+    <section id="packlista" aria-labelledby="packing-title">
+      <h2 id="packing-title">Packlista</h2>
+      <div class="bag-allowance">
+        <p><strong>Pontus</strong><br>20 kg incheckat ut och hem<br>Retur: Prioritet + två handbagage</p>
+        <p><strong>Sarri</strong><br>20 kg incheckat ut och hem</p>
+      </div>
+      <p class="packing-note">Kryssen sparas på den här enheten. Personliga listor kan skötas på varsin telefon; låt en person ansvara för Delat.</p>
+      <div class="packing-tabs" role="tablist" aria-label="Packlistor">
+        <button type="button" role="tab" aria-selected="true" data-pack-tab="pontus">Pontus <span id="progress-pontus"></span></button>
+        <button type="button" role="tab" aria-selected="false" data-pack-tab="sarri">Sarri <span id="progress-sarri"></span></button>
+        <button type="button" role="tab" aria-selected="false" data-pack-tab="shared">Delat <span id="progress-shared"></span></button>
+      </div>
+      <div id="packing-lists"></div>
+      <button type="button" id="reset-packing" class="reset-packing">Nollställ alla kryss</button>
     </section>
 
     <section id="budget" aria-labelledby="budget-title">
