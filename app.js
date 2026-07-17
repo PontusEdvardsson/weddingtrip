@@ -109,4 +109,12 @@ document.querySelector("#reset-packing").addEventListener("click", () => {
 showPackingList("pontus");
 updatePackingProgress();
 
-if ("serviceWorker" in navigator) navigator.serviceWorker.register("service-worker.js");
+if ("serviceWorker" in navigator) {
+  let refreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (refreshing) return;
+    refreshing = true;
+    window.location.reload();
+  });
+  navigator.serviceWorker.register("service-worker.js").then(registration => registration.update());
+}
