@@ -6,7 +6,7 @@ const days = [
   { date: "Sön 9 augusti", from: "Elgin", to: "Elgin", plans: ["Elgin → Eilean Donan: cirka 2 tim 15–30 min", "Förslag: avfärd 08:00", "Eilean Donan → Loch Ness/Drumnadrochit: cirka 1 tim 15 min", "Loch Ness → Elgin: cirka 1 tim 15–30 min", "Total körning: cirka 5 timmar"] },
   { date: "Mån 10 augusti", from: "Elgin", to: "Lennoxtown", plans: ["Checka ut och åk cirka 08:30", "Elgin → Glenfinnan: cirka 2 tim 30 min", "Glenfinnan → Glen Etive/Skyfall-vägen: cirka 1 tim 30 min", "Räkna minst 2 timmar för Glen Etive tur och retur", "Glen Etive → Lennoxtown: cirka 1 tim 45 min", "Total körning: cirka 5 tim 45 min", "Airbnb-incheckning efter 14:00", "BBQ i glamping pod"] },
   { date: "Tis 11 augusti", from: "Lennoxtown", to: "East Calder", plans: ["Checka ut före 10:00", "Lennoxtown → centrala Glasgow: cirka 30–40 min", "Glasgow → East Calder: cirka 50–60 min", "Direkt till East Calder: cirka 55–70 min", "Airbnb-incheckning efter 15:00"] },
-  { date: "Ons 12 augusti", from: "East Calder", to: "East Calder", plans: ["East Calder → centrala Edinburgh: cirka 35–50 min utan parkering", "Räkna med 60 min totalt och kontrollera parkering eller tåg", "Utforska Edinburgh", "Fin middag på kvällen"] },
+  { date: "Ons 12 augusti", from: "East Calder", to: "East Calder", plans: ["Avfärd mot Edinburgh cirka 10:40", "East Calder → 25 Nicolson Square: cirka 35–50 min utan parkering", "Räkna med extra tid för parkering och var på plats senast 11:50", "Escape The Past · The Anatomist 12:00", "Utforska Edinburgh", "Fin middag på kvällen"] },
   { date: "Tors 13 augusti", from: "East Calder", to: "Hemma", plans: ["Checka ut före 11:00", "East Calder → Airpark House: cirka 15–25 min", "Förslag: avfärd 10:45 och bilåterlämning senast 12:00", "Edinburgh 14:25 → Landvetter 17:15", "Hemma cirka 19:00"] }
 ];
 
@@ -19,7 +19,6 @@ const budget = [
   ["Golf", 2500],
   ["Whisky/minnesflaska", 2000],
   ["Övriga aktiviteter och entréer", 2500],
-  ["UK ETA för två", 520],
   ["Parkering och lokaltrafik", 1500],
   ["Reserv", 3500]
 ];
@@ -34,7 +33,7 @@ const packing = {
     "Resan": ["Pass – 2 st", "Körkort – 1 st per förare", "Flygbiljetter i Ryanair-appen – på båda mobilerna", "Hyrbilsvoucher – digital + 1 utskrift", "Boendeuppgifter – offline på båda mobilerna", "Reseförsäkring och EU-kort – för båda", "Betalkort – minst 2 olika kort", "Reservpengar – cirka £100"],
     "Praktiskt": ["Reseadaptrar för brittiska vägguttag – 2 st", "Värktabletter – 1 förpackning", "Skavsårsplåster – 1 förpackning", "Solskydd – 1 liten flaska", "Myggmedel – 1 st", "Tvättsäckar – 2 st", "Liten dagryggsäck – 1 st", "Bagagevåg – 1 st"],
     "Golf och bil": ["Solglasögon – 1 par per person", "Offlinekartor – nedladdade på båda mobilerna", "Kontrollera däck och fotografera hyrbilen"],
-    "Innan avresa": ["Ordna kattvakter", "Göm nyckel", "Väg Pontus väska – max 20 kg", "Väg Sarris väska – max 20 kg", "Ladda ner boardingkort", "Ladda mobiler och powerbanks", "Kontrollera väderprognosen"]
+    "Innan avresa": ["Ordna kattvakter", "Göm nyckel", "Väg Pontus väska – max 20 kg", "Ladda ner boardingkort", "Ladda mobiler och powerbanks", "Kontrollera väderprognosen"]
   }
 };
 
