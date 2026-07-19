@@ -26,19 +26,19 @@ const budget = [
 
 const packing = {
   pontus: {
-    "Kläder": ["Underkläder och strumpor", "T-shirts och skjortor", "Byxor", "Tröja eller fleece", "Sovkläder", "Finare kläder till middagen", "Regnjacka", "Vardagsjacka", "Bekväma skor", "Golfkläder", "Keps eller mössa"],
-    "Hygien": ["Tandborste och tandkräm", "Deodorant", "Hud- och hårprodukter", "Rakhyvel", "Kontaktlinser eller glasögon", "Personliga läkemedel"],
-    "Teknik och handbagage": ["Mobil", "Plånbok", "Hörlurar", "Laddkabel", "Powerbank", "Retur: liten väska under sätet", "Retur: kabinväska enligt Priority-mått"]
+    "Kläder": ["Underkläder – 10 par", "Strumpor – 10 par, varav 2 varmare", "T-shirts – 5 st", "Skjortor – 2 st", "Byxor – 3 par", "Tröjor eller fleece – 2 st", "Sovkläder – 1 uppsättning", "Finare kläder till middagen – 1 uppsättning", "Regnjacka – 1 st", "Lätt vardagsjacka – 1 st", "Bekväma promenadskor – 1 par", "Finare skor – 1 par", "Golfkläder – 1 uppsättning", "Golfskor – 1 par om de behövs", "Keps eller mössa – 1 st", "Badkläder – 1 par"],
+    "Hygien": ["Tandborste och tandkräm – 1 av varje", "Deodorant – 1 st", "Schampo och duschgel – reseförpackningar", "Hud- och hårprodukter – reseförpackningar", "Rakhyvel – 1 st", "Kontaktlinser för 10 dagar eller glasögon", "Personliga läkemedel – 10 dagar + 2 reservdagar"],
+    "Teknik och handbagage": ["Mobil – 1 st", "Plånbok – 1 st", "Hörlurar – 1 par", "Laddkabel – 1 st", "Powerbank – 1 st, i handbagaget", "Retur: liten väska under sätet – 1 st", "Retur: kabinväska enligt Priority-mått – 1 st"]
   },
   sarri: {
-    "Kläder": ["Underkläder och strumpor", "Toppar och skjortor", "Byxor, kjol eller klänning", "Tröja eller fleece", "Sovkläder", "Finare kläder till middagen", "Regnjacka", "Vardagsjacka", "Bekväma skor", "Golfkläder", "Keps eller mössa"],
-    "Hygien": ["Tandborste och tandkräm", "Deodorant", "Hud- och hårprodukter", "Smink och sminkborttagning", "Kontaktlinser eller glasögon", "Personliga läkemedel"],
-    "Teknik och handbagage": ["Mobil", "Plånbok", "Hörlurar", "Laddkabel", "Powerbank", "Liten väska för resdagen"]
+    "Kläder": ["Underkläder – 10 par", "Strumpor – 10 par, varav 2 varmare", "Toppar eller T-shirts – 5 st", "Skjortor eller blusar – 2 st", "Byxor – 2 par", "Kjol eller vardagsklänning – 1 st", "Tröjor eller fleece – 2 st", "Sovkläder – 1 uppsättning", "Finare kläder till middagen – 1 uppsättning", "Regnjacka – 1 st", "Lätt vardagsjacka – 1 st", "Bekväma promenadskor – 1 par", "Finare skor – 1 par", "Golfkläder – 1 uppsättning", "Golfskor – 1 par om de behövs", "Keps eller mössa – 1 st", "Badkläder – 1 uppsättning"],
+    "Hygien": ["Tandborste och tandkräm – 1 av varje", "Deodorant – 1 st", "Schampo och balsam – reseförpackningar", "Hud- och hårprodukter – reseförpackningar", "Smink och sminkborttagning – 1 necessär", "Kontaktlinser för 10 dagar eller glasögon", "Personliga läkemedel – 10 dagar + 2 reservdagar"],
+    "Teknik och handbagage": ["Mobil – 1 st", "Plånbok – 1 st", "Hörlurar – 1 par", "Laddkabel – 1 st", "Powerbank – 1 st, i handbagaget", "Liten väska för resdagen – 1 st"]
   },
   shared: {
-    "Resan": ["Pass", "Körkort", "Kontrollera UK ETA mot rätt pass", "Flygbiljetter i Ryanair-appen", "Hyrbilsvoucher", "Boendeuppgifter offline", "Reseförsäkring och EU-kort", "Betalkort och lite reservpengar"],
-    "Praktiskt": ["UK-adapter", "Gemensam laddare", "Powerbank", "Första hjälpen och värktabletter", "Solskydd", "Myggmedel", "Paraply", "Vattenflaskor", "Tvättsäck", "Plastpåse för våta kläder"],
-    "Golf och bil": ["Boka hyrklubbor vid behov", "Golfhandskar", "Golfbollar och peggar", "Solglasögon", "Mobilhållare till bilen", "Offlinekartor", "Kontrollera däck och fotografera hyrbilen"],
+    "Resan": ["Pass – 2 st", "Körkort – 1 st per förare", "Flygbiljetter i Ryanair-appen – på båda mobilerna", "Hyrbilsvoucher – digital + 1 utskrift", "Boendeuppgifter – offline på båda mobilerna", "Reseförsäkring och EU-kort – för båda", "Betalkort – minst 2 olika kort", "Reservpengar – cirka £100"],
+    "Praktiskt": ["UK-adaptrar – 2 st", "Gemensam multiladdare – 1 st", "Extra laddkablar – 2 st", "Första hjälpen-kit – 1 litet", "Värktabletter – 1 förpackning", "Skavsårsplåster – 1 förpackning", "Solskydd – 1 liten flaska", "Myggmedel – 1 st", "Hopfällbara paraplyer – 2 st", "Vattenflaskor – 2 st", "Tvättsäckar – 2 st", "Påsar för våta kläder – 2 st", "Liten dagryggsäck – 1 st", "Bagagevåg – 1 st", "Flaskskydd till whisky – 1 st"],
+    "Golf och bil": ["Boka hyrklubbor – 2 set vid behov", "Golfhandskar – 1 par per spelare", "Golfbollar – 6 st", "Peggar – cirka 10 st", "Solglasögon – 1 par per person", "Mobilhållare till bilen – 1 st", "Billaddare med två uttag – 1 st", "Offlinekartor – nedladdade på båda mobilerna", "Kontrollera däck och fotografera hyrbilen"],
     "Innan avresa": ["Väg Pontus väska – max 20 kg", "Väg Sarris väska – max 20 kg", "Ladda ner boardingkort", "Ladda mobiler och powerbanks", "Kontrollera väderprognosen", "Ställ in autosvar och ordna hemmet"]
   }
 };
