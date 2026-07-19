@@ -32,7 +32,7 @@ const packing = {
   },
   shared: {
     "Resan": ["Pass – 2 st", "Körkort – 1 st per förare", "Flygbiljetter i Ryanair-appen – på båda mobilerna", "Hyrbilsvoucher – digital + 1 utskrift", "Boendeuppgifter – offline på båda mobilerna", "Reseförsäkring och EU-kort – för båda", "Betalkort – minst 2 olika kort", "Reservpengar – cirka £100"],
-    "Praktiskt": ["UK-adaptrar – 2 st", "Första hjälpen-kit – 1 litet", "Värktabletter – 1 förpackning", "Skavsårsplåster – 1 förpackning", "Solskydd – 1 liten flaska", "Myggmedel – 1 st", "Hopfällbara paraplyer – 2 st", "Vattenflaskor – 2 st", "Tvättsäckar – 2 st", "Påsar för våta kläder – 2 st", "Liten dagryggsäck – 1 st", "Bagagevåg – 1 st", "Flaskskydd till whisky – 1 st"],
+    "Praktiskt": ["Reseadaptrar för brittiska vägguttag – 2 st", "Första hjälpen-kit – 1 litet", "Värktabletter – 1 förpackning", "Skavsårsplåster – 1 förpackning", "Solskydd – 1 liten flaska", "Myggmedel – 1 st", "Hopfällbara paraplyer – 2 st", "Vattenflaskor – 2 st", "Tvättsäckar – 2 st", "Påsar för våta kläder – 2 st", "Liten dagryggsäck – 1 st", "Bagagevåg – 1 st", "Flaskskydd till whisky – 1 st"],
     "Golf och bil": ["Boka hyrklubbor – 2 set vid behov", "Golfbollar – 6 st", "Peggar – cirka 10 st", "Solglasögon – 1 par per person", "Mobilhållare till bilen – 1 st", "Billaddare med två uttag – 1 st", "Offlinekartor – nedladdade på båda mobilerna", "Kontrollera däck och fotografera hyrbilen"],
     "Innan avresa": ["Väg Pontus väska – max 20 kg", "Väg Sarris väska – max 20 kg", "Ladda ner boardingkort", "Ladda mobiler och powerbanks", "Kontrollera väderprognosen", "Ställ in autosvar och ordna hemmet"]
   }

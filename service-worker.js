@@ -1,4 +1,4 @@
-const CACHE = "brollopsresan-v27";
+const CACHE = "brollopsresan-v28";
 const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./manifest.webmanifest"];
 self.addEventListener("install", event => {
   self.skipWaiting();
