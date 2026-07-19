@@ -27,7 +27,7 @@ const budget = [
 const packing = {
   pontus: {
     "Kläder": ["Underkläder – 10 par", "Strumpor – 10 par, varav 2 varmare", "T-shirts – 5 st", "Skjortor – 2 st", "Byxor – 2 par", "Shorts – 2 par", "Tröjor eller fleece – 2 st", "Sovkläder – 1 uppsättning", "Finare kläder till middagen – 1 uppsättning", "Lätt vardagsjacka – 1 st", "Bekväma promenadskor – 1 par", "Finare skor – 1 par", "Golfhandske – 1 st", "Keps eller mössa – 1 st", "Badkläder – 1 par"],
-    "Hygien": ["Tandborste och tandkräm – 1 av varje", "Deodorant – 1 st", "Schampo och duschgel – reseförpackningar", "Hud- och hårprodukter – reseförpackningar", "Rakhyvel – 1 st", "Kontaktlinser för 10 dagar eller glasögon", "Personliga läkemedel – 10 dagar + 2 reservdagar"],
+    "Hygien": ["Tandborste och tandkräm – 1 av varje", "Deodorant – 1 st", "Schampo och duschgel – reseförpackningar", "Personliga läkemedel – 10 dagar + 2 reservdagar"],
     "Teknik och handbagage": ["Mobil – 1 st", "Plånbok – 1 st", "Hörlurar – 1 par", "USB-C-kablar – 2 st", "Laddare – 3 st", "iPhone-laddkabel – 1 st", "Powerbank – 1 st, i handbagaget", "Retur: liten väska under sätet – 1 st", "Retur: kabinväska enligt Priority-mått – 1 st"]
   },
   shared: {
